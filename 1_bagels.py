@@ -13,12 +13,14 @@ print('I have thought up a number.\nYou have ten guesses to get it.')
 
 user_active = True
 
+#Main loop for the game
 while user_active:
 
     comp_num = str(random.randint(100,999))
-    # print(comp_num)
+    # print(comp_num) #Check line
     num_guesses = 1
 
+    #Checking user guesses
     while num_guesses < 11:
         print(f"Guess #{num_guesses}")
         
@@ -53,7 +55,7 @@ while user_active:
 
     print('Would you like to keep playing? (Y/N)')
     
-
+    #Checking that input is valid
     while True:
         user_choice = input().upper()
         if user_choice == 'N' or user_choice == 'Y':
@@ -61,6 +63,7 @@ while user_active:
         else:
             print("Whoops! I didn't understand that")
 
+    #Checking if user wants to continue
     if user_choice == 'Y':
         print('Here we go again!')
     elif user_choice == 'N':
